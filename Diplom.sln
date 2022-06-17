@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diplom", "Diplom\Diplom.csproj", "{C560CC06-8C08-4814-82AD-13F2FB933EDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{600900A9-F332-4FD1-AA41-003620995BF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converter", "DwtToPdf\Converter.csproj", "{94B6CC18-4C0E-458C-B86C-79400802EC1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwtReader", "DwtReader\DwtReader.csproj", "{B5CC02EE-7C8C-484F-B0C0-FCF45E1C2E21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUIConverter", "GUIConverter\GUIConverter.csproj", "{411A47EB-298D-47CF-9C9E-6E29A1B0D412}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwtDrawer", "PdfGraphicFiller\DwtDrawer.csproj", "{62455517-170E-49F8-8EA4-3F070392DAE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converter.UnitTests", "TestConverter\Converter.UnitTests.csproj", "{EDA3D150-9A17-4255-B10C-A23F5C172A60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C560CC06-8C08-4814-82AD-13F2FB933EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C560CC06-8C08-4814-82AD-13F2FB933EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C560CC06-8C08-4814-82AD-13F2FB933EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C560CC06-8C08-4814-82AD-13F2FB933EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600900A9-F332-4FD1-AA41-003620995BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600900A9-F332-4FD1-AA41-003620995BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600900A9-F332-4FD1-AA41-003620995BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600900A9-F332-4FD1-AA41-003620995BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B6CC18-4C0E-458C-B86C-79400802EC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B6CC18-4C0E-458C-B86C-79400802EC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B6CC18-4C0E-458C-B86C-79400802EC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B6CC18-4C0E-458C-B86C-79400802EC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5CC02EE-7C8C-484F-B0C0-FCF45E1C2E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CC02EE-7C8C-484F-B0C0-FCF45E1C2E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CC02EE-7C8C-484F-B0C0-FCF45E1C2E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CC02EE-7C8C-484F-B0C0-FCF45E1C2E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411A47EB-298D-47CF-9C9E-6E29A1B0D412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411A47EB-298D-47CF-9C9E-6E29A1B0D412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411A47EB-298D-47CF-9C9E-6E29A1B0D412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411A47EB-298D-47CF-9C9E-6E29A1B0D412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62455517-170E-49F8-8EA4-3F070392DAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62455517-170E-49F8-8EA4-3F070392DAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62455517-170E-49F8-8EA4-3F070392DAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62455517-170E-49F8-8EA4-3F070392DAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA3D150-9A17-4255-B10C-A23F5C172A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA3D150-9A17-4255-B10C-A23F5C172A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA3D150-9A17-4255-B10C-A23F5C172A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA3D150-9A17-4255-B10C-A23F5C172A60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3B05119-8263-45B9-A0C9-9070D06728C6}
+	EndGlobalSection
+EndGlobal
