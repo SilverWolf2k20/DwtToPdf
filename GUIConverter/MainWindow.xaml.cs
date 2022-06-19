@@ -250,6 +250,7 @@ namespace GUIConverter
         {
             if (orientation == SheetOrientation.Bookstore)
                 return "Книжная";
+
             return "Альбомная";
         }
         #endregion
@@ -281,12 +282,16 @@ namespace GUIConverter
             foreach (var entity in _dwtData.Objects) {
                 if (entity.type == ObjectType.LwPolyLine) {
                     var polyline = entity.entity as LwPolyLine;
+
                     if (polyline is null)
                         continue;
+
                     if (polyline.Owner.reference != _pdfSheets[_sheets.SelectedIndex].ID)
                         continue;
+
                     if (polyline.Invisible == 1)
                         continue;
+
                     for (int i = 0; i < polyline.Points.Count - 1; i++) {
                         var point1 = polyline.Points[i];
                         var point2 = polyline.Points[i + 1];
@@ -298,18 +303,23 @@ namespace GUIConverter
                         canvasline.Y1 = Reflect(point1.y * _factor);
                         canvasline.Y2 = Reflect(point2.y * _factor);
                         canvasline.StrokeThickness = 1;
+
                         _content.Children.Add(canvasline);
                     }
                 }
 
                 if (entity.type == ObjectType.Line) {
                     var line = entity.entity as Line;
+
                     if (line is null)
                         continue;
+
                     if (line.Owner.reference != _pdfSheets[_sheets.SelectedIndex].ID)
                         continue;
+
                     if (line.Invisible == 1)
                         continue;
+
                     var canvasline = new Shapes.Line();
                     canvasline.Stroke = Brushes.Black;
                     canvasline.X1 = Norm(line.StartX * _factor);
@@ -317,6 +327,7 @@ namespace GUIConverter
                     canvasline.Y1 = Reflect(line.StartY * _factor);
                     canvasline.Y2 = Reflect(line.EndY * _factor);
                     canvasline.StrokeThickness = 1;
+
                     _content.Children.Add(canvasline);
                 }
             }
