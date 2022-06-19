@@ -81,10 +81,9 @@ namespace Usl
                 return;
 
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.Green;
-                Write("[TRACE] ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.Green, "[TRACE] ");
                 WriteLine(message);
+
                 return;
             }
             _file.Write("[TRACE] ");
@@ -110,9 +109,7 @@ namespace Usl
         {
 #if DEBUG
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.Magenta;
-                Write("[DEBUG] ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.Magenta, "[DEBUG] ");
                 WriteLine(message);
                 return;
             }
@@ -142,10 +139,9 @@ namespace Usl
                 return;
 
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.Blue;
-                Write("[INFO]  ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.Blue, "[INFO]  ");
                 WriteLine(message);
+
                 return;
             }
             _file.Write("[INFO]  ");
@@ -170,10 +166,9 @@ namespace Usl
                 return;
 
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.DarkYellow;
-                Write("[WARN]  ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.DarkYellow, "[WARN]  ");
                 WriteLine(message);
+
                 return;
             }
             _file.Write("[WARN]  ");
@@ -198,10 +193,9 @@ namespace Usl
                 return;
 
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.Red;
-                Write("[ERROR] ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.Red, "[ERROR] ");
                 WriteLine(message);
+
                 return;
             }
             _file.Write("[ERROR] ");
@@ -226,10 +220,9 @@ namespace Usl
                 return;
 
             if (_writeTo == WriteTo.Console) {
-                ForegroundColor = ConsoleColor.DarkRed;
-                Write("[FATAL] ");
-                ResetColor();
+                PrintLogLevel(ConsoleColor.DarkRed, "[FATAL] ");
                 WriteLine(message);
+
                 return;
             }
             _file.Write("[FATAL] ");
@@ -243,5 +236,18 @@ namespace Usl
         /// <param name="args">Аргументы</param>
         public static void Fatal(string message, params object[] args)
             => Fatal(string.Format(message, args));
+
+
+        /// <summary>
+        /// Выводит уровень логиирования.
+        /// </summary>
+        /// <param name="color">Цвет уровня лога</param>
+        /// <param name="name">Имя уровня лога</param>
+        private static void PrintLogLevel(ConsoleColor color, string name)
+        {
+            ForegroundColor = color;
+            Write(name);
+            ForegroundColor = ConsoleColor.White;
+        }
     }
 }
