@@ -1,5 +1,5 @@
 # DWT to PDF
-![coverage](https://img.shields.io/badge/version-1.1.2-blue) ![coverage](https://img.shields.io/badge/-Okolo%20IT-orange) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/linux-ci.yml/badge.svg?branch=main) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/windows-ci.yml/badge.svg?branch=main)
+![coverage](https://img.shields.io/badge/version-1.1.3-blue) ![coverage](https://img.shields.io/badge/-Okolo%20IT-orange) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/linux-ci.yml/badge.svg?branch=main) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/windows-ci.yml/badge.svg?branch=main)
 
 Программное обеспечение для автоматического преобразования файлов конструкторской документации из формата DWT/DWG (2013 года) в документ PDF.
 
@@ -43,6 +43,6 @@
 
 ---
 ## Лицензия
->Вы можете ознакомиться с полной лицензией [здесь](https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
+>Вы можете ознакомиться с полной лицензией [здесь](https://github.com/SilverWolf2k20/DwtToPdf/blob/master/LICENSE.md)
 
 Этот проект находится под лицензией **MIT**.
