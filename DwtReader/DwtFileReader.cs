@@ -96,6 +96,7 @@ namespace DwtReader
                 // Создать файловый поток и определить версию формата.
                 var stream  = new DwtStream(File.Open(_filePath, FileMode.Open));
                 _version    = DetermineVersion(stream);
+
                 // Создать фабрику и получить от нее декодер.
                 var factory = new DwtDecoderFactory();
                 var decoder = factory.Create(_version);
@@ -124,6 +125,7 @@ namespace DwtReader
         {
             stream.SetPosition(0);
             var version = new string(stream.GetChars(6));
+
             try {
                 return (DwtVersion)Enum.Parse(typeof(DwtVersion), version);
             }

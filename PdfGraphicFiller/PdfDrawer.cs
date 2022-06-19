@@ -42,6 +42,7 @@ namespace DwtDrawer
         {
             _document = new Document();
             _fileName = name;
+
             TextSetting();
         }
 
@@ -69,6 +70,7 @@ namespace DwtDrawer
                 // Настраивается размер листа.
                 _document.SetPageSize(ComputePageSize(sheets[i]));
                 _document.NewPage();
+
                 // Прорисовываются объекты на лоисте.
                 DrawingObjects(file, sheets[i], content);
             }
@@ -94,6 +96,7 @@ namespace DwtDrawer
             catch (Exception) {
                 return false;
             }
+
             return true;
         }
 
@@ -166,9 +169,12 @@ namespace DwtDrawer
             foreach (var entity in file.Objects) {
                 if (entity.type == ObjectType.LwPolyLine) {
                     var polyline = entity.entity as LwPolyLine;
+
                     if (polyline is null || polyline.Owner.reference != sheet.ID || polyline.Invisible == 1)
                         continue;
+
                     content.SetLineWidth(polyline.Thickness);
+
                     for (int p = 0; p < polyline.Points.Count - 1; ++p) {
                         content.MoveTo(ComputeOffsetX(sheet, (float)polyline.Points[p].x),
                                        ComputeOffsetY(sheet, (float)polyline.Points[p].y));
@@ -196,10 +202,13 @@ namespace DwtDrawer
                     content.Circle(ComputeOffsetX(sheet, (float)circle.CenterX),
                                    ComputeOffsetY(sheet, (float)circle.CenterY),
                                    MillimetersToPoints(  (float)circle.Radius));
+
                     content.Stroke();
                 }
+
                 if (entity.type == ObjectType.Text) {
                     var text = entity.entity as Text;
+
                     if (text is null || text.Owner.reference != sheet.ID || text.Invisible == 1)
                         continue;
 
@@ -213,6 +222,7 @@ namespace DwtDrawer
                         ComputeOffsetX(sheet, (float)x),
                         ComputeOffsetY(sheet, (float)y),
                         ToGradus((float)text.RotationAngle));
+
                     content.EndText();
                 }
             }
